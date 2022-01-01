@@ -139,7 +139,7 @@ class UserController{
                 header("Location:../controller/UserController.php");
                 break;
             case 'user_delete':
-                session_start();
+               
                 if($_SESSION["role"]==="Admin"){
                     $_SESSION["delete"]= true;
                     $id=$_GET["id"];
@@ -157,6 +157,7 @@ class UserController{
     }
     
 }
+session_start();
 $user_action = "";
 if(count($_POST)>0){
     $user_action = $_POST["user_action"];

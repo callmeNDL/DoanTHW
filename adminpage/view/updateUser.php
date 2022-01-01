@@ -44,7 +44,7 @@
                                 <form action="../controller/UserController.php" method="post" enctype="multipart/form-data" class="form-horizontal">
                                     <div class="row form-group">
                                         <div class="col col-md-3"><label for="text-input" class=" form-control-label">UserId</label></div>
-                                        <div class="col-12 col-md-9"><input disabled type="text" value="<?php echo $data[0]["user_id"]; ?>" name="txt_userID" class="form-control"></div>
+                                        <div class="col-12 col-md-9"><input type="text" value="<?php echo $data[0]["user_id"]; ?>" name="txt_userID" class="form-control"></div>
                                     </div>
                                     <div class="row form-group">
                                         <div class="col col-md-3"><label for="text-input" class=" form-control-label">Username</label></div>
