@@ -1,6 +1,6 @@
 <?php 
 include_once '../util/MySQLUtils.php';
-include '../model/UserModel.php'; 
+
 ?>
 <!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
     <head>
@@ -26,7 +26,7 @@ include '../model/UserModel.php';
                         <div class="col-sm-4">
                             <div class="page-header float-left">
                                 <div class="page-title">
-                                    <button class="btn btn-primary"><i class="fa fa-plus" ></i><a href="createUser.php"> New User</a></button>
+                                    <button class="btn btn-primary"><i class="fa fa-plus" ></i><a href="../view/createUser.php"> New User</a></button>
                                 </div>
                             </div>
                         </div>
@@ -58,34 +58,32 @@ include '../model/UserModel.php';
                                         </thead>
                                         <tbody>
                                             <?php 
-                                                $myDB = new MySQLUtils();
+                                                /* $myDB = new MySQLUtils();
                                                 $myDB->connectDB();
                                                 $query = "SELECT user_id,username, password, email, sex FROM USER";                                                
                                                 $data_users= $myDB->getAllData($query);
                                                 //var_dump($user);
-                                                $myDB->disconnectDB(); 
-                                               
-                                                
-
-                                                for($i=0;$i<count($data_users);$i++){
+                                                $myDB->disconnectDB();  */
+                                                //var_dump($listUsers);
+                                                for($i=0;$i<count($listUsers);$i++){
                                                     echo '<tr>';
                                                     echo '<td class="serial">'.($i+1).'</td>';
                                                     echo '<td class="avatar">';
                                                     echo '<div class="round-img">';
-                                                    echo '<a href="#"><img class="rounded-circle" src="images/avatar/me.jpeg" alt=""></a>';
+                                                    echo '<a href="#"><img class="rounded-circle" src="../view/images/uploads/'.$listUsers[$i]["avartar"].'" alt=""></a>';
                                                     echo '</div>';
                                                     echo '</td>';
-                                                    echo '<td>'.$data_users[$i]["user_id"].'</td>';
-                                                    echo '<td>  <span >'.$data_users[$i]["username"].'</span> </td>';
-                                                    echo '<td> '.$data_users[$i]["email"].'</td>';
+                                                    echo '<td>'.$listUsers[$i]["user_id"].'</td>';
+                                                    echo '<td>  <span >'.$listUsers[$i]["username"].'</span> </td>';
+                                                    echo '<td> '.$listUsers[$i]["email"].'</td>';
 
                                                     echo '<td>';
                                                     echo ' <span class="badge badge-complete">Active</span>';
                                                     echo ' </td>';
 
                                                     echo ' <td>';
-                                                    echo '    <button class="btn btn-success"><i class="fa fa-edit"></i> <a href="../controller/UserController.php?action=user_edit&id='.($data_users[$i]["user_id"]).'">Edit</a></button>';
-                                                    echo '   <button class="btn btn-danger" ><i class="fa fa-trash-o"></i><a href="../controller/UserController.php?action=user_delete&id='.($data_users[$i]["user_id"]).'">Delete</button>';
+                                                    echo '    <button class="btn btn-success"><i class="fa fa-edit"></i> <a href="../controller/UserController.php?action=user_edit&id='.($listUsers[$i]["user_id"]).'">Edit</a></button>';
+                                                    echo '   <button class="btn btn-danger" ><i class="fa fa-trash-o"></i><a href="../controller/UserController.php?action=user_delete&id='.($listUsers[$i]["user_id"]).'">Delete</button>';
                                                         
                                                     echo '</td>';
                                                     echo '</tr>';

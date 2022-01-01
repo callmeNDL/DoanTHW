@@ -1498,6 +1498,7 @@ header .form-inline {
         .rounded-circle {
             max-width: 130px;
             margin-top: -65px;
+            
         }
         .weather-footer i {
             color: #868e96;
@@ -2611,6 +2612,10 @@ footer.site-footer {
         .rounded-circle {
             max-width: 60px;
             margin-top: 8px;
+            &.update{
+                max-width: 60px;
+                margin-top: 8px;
+            }
         }
     }
     footer.site-footer {
@@ -2654,7 +2659,7 @@ footer.site-footer {
         .top-left, .top-right {
             width: 100%;
             float: none;
-            background: white;
+            background: no-repeat !important;
         }
         .menutoggle  {
             float: right;
@@ -2730,7 +2735,7 @@ footer.site-footer {
         }
     }
     .right-panel {
-        .navbar-brand  {
+        .right-panel .navbar-header  {
             width: 220px;
             padding-bottom: 5px;
         }

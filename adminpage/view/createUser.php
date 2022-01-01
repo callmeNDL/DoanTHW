@@ -22,7 +22,7 @@
                         <div class="col-sm-4">
                             <div class="page-header float-left">
                                 <div class="page-title">
-                                    <button class="btn btn-primary"><i class="fa fa-caret-square-o-left"></i><a href="users.php"> Back </a> </button>
+                                    <button class="btn btn-primary"><i class="fa fa-caret-square-o-left"></i><a href="../controller/UserController.php"> Back </a> </button>
                                 </div>
                             </div>
                         </div>
