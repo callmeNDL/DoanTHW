@@ -47,7 +47,7 @@
                                 <form action="../controller/OrderController.php" method="post" enctype="multipart/form-data" class="form-horizontal">
                                     <div class="row form-group">
                                         <div class="col col-md-3"><label for="email-input" class=" form-control-label">ID</label></div>
-                                        <div class="col-12 col-md-9"><input  type="text"  name="txt_id" class="form-control" value="<?php echo $data[0]["id"]; ?>"></div>
+                                        <div class="col-12 col-md-9"><input hidden type="text"  name="txt_id" class="form-control" value="<?php echo $data[0]["id"]; ?>"></div>
                                     </div>
                                     <div class="row form-group">
                                         <div class="col col-md-3"><label for="email-input" class=" form-control-label">Name</label></div>

@@ -1,6 +1,4 @@
-<?php
-session_start();
-?>
+
 <header id="header" class="header ndl">
     <div class="top-left">
         <div class="navbar-header">

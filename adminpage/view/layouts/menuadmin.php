@@ -14,7 +14,7 @@
                     </ul>
                 </li>
                 <li class="menu-item-has-children active dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-th"></i>Manager Product</a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-list-alt"></i> Manager Product</a>
                     <ul class="sub-menu children dropdown-menu">
                         <li><i class="menu-icon fa fa-th"></i><a href="../controller/OrderController.php">Product</a></li>
                         <li><i class="menu-icon fa fa-th"></i><a href="../view/createProduct.php">Create Product</a></li>
